@@ -1,0 +1,30 @@
+Task is to write a function that takes necessary inputs and divides the array into 2 section which are called
+winter and summer. Write a function:
+
+That, given a sequence T of temperature measurements (specified as integer numbers), finds the
+partition of the year into winter and summer that meets the conditions such that it would be met. Conditions are:
+    * Divide the year into winter (array) and summer (array) so that winter comes before summer
+    and each winter temperature is smaller than the any temperature measured in the summer.
+    * Make winter as short as possible, then returns the length of the winter.
+    * Both winter and summer have to be at least one day long.
+    * In case of there are many possible division of the initial array, take the one where winter is
+    as short as possible.
+    * You can assume that there are solutions to mentioned division where at least one partition that
+satisfies this condition.
+
+For example, given:
+T = [5, -2, 3, 8, 6]
+The function should return 3, as after partitioning the year into winter: [5, -2, 3] and summer: [8, 6],
+each winter’s measurement is smaller than each summer’s temperature.
+
+On the other hand, for the following array:
+T = [-5, -5, -5, -42, 6, 12]
+
+The function should return 4. The partition that minimize the length of the winter is [-5, -5,-5,-42]
+and [6, 12]. Winter could also have length 5, but the function should return the shortest possible
+winter.
+
+Assume that:
+* N is an integer within the range [2 .. 300,000];
+* Each element of array T is an integer within the range [-1,000,000,000 .. 1,000,000,000];
+* There will be at least one correct way to divide the year into winter and summer.
